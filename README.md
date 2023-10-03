@@ -20,11 +20,10 @@ Weatherate
 
 ## Directory Hierarchy
 ```
-|—— __pycache__
-|    |—— main.cpython-310.pyc
-|—— main.py
-|—— README.md
+|—— .gitignore
 |—— LICENSE
+|—— README.md
+|—— main.py
 ```
 
 ### Tested Platform
