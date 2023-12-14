@@ -27,7 +27,7 @@ async def get_forecast(city):
 
             for hour in forecast.hourly:
                 print(
-                    f'\nTime: {hour.time.hour!r}:{hour.time.minute!r}\nTemperature: {hour.temperature!r}℃\nKind: {hour.description!r}\nFeels like: {hour.feels_like!r}℃\nWind direction: {hour.wind_direction.name!r} or {hour.wind_direction.degrees!r} deg.\nWind speed: {hour.wind_speed!r} km/h\nWind gusts: {hour.wind_gust!r} km/h\nPressure: {hour.pressure!r} hPa\nVisibility: {hour.visibility!r}\nUltraviolet rate: {hour.ultraviolet.name}\n')
+                    f'\nTime: {hour.time.hour!r}:{hour.time.minute!r}\nTemperature: {hour.temperature!r}℃\nKind: {hour.kind}\nFeels like: {hour.feels_like!r}℃\nWind direction: {hour.wind_direction.name!r} or {hour.wind_direction.degrees!r} deg.\nWind speed: {hour.wind_speed!r} km/h\nWind gusts: {hour.wind_gust!r} km/h\nPressure: {hour.pressure!r} hPa\nVisibility: {hour.visibility!r}\nUltraviolet rate: {hour.ultraviolet.name}\n')
 
 if len(sys.argv) == 1:
     print('Welcome to Weaterate!\n'
@@ -55,5 +55,14 @@ if __name__ == '__main__':
             loop = asyncio.get_event_loop()
             loop.run_until_complete(get_weather(city))
             loop.close()
+        elif city == '-h':
+                print('Welcome to Weaterate!\n'
+          '___HELP___\n'
+          '     COMMANDS: \n'
+          '         -gf: get temperature for next three days and hourly forecast\n'
+          '         -gw: get current weather\n'
+          '          -h: get help\n'
+          '     USE: \n'
+          '         python(3) [path to main.py] [city (if city name has spaces, please, make sure that name is in "''")] [command]')
         else:
             print('invalid choice: try -h for help')
