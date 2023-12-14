@@ -56,13 +56,13 @@ if __name__ == '__main__':
             loop.run_until_complete(get_weather(city))
             loop.close()
         elif city == '-h':
-                print('Welcome to Weaterate!\n'
-          '___HELP___\n'
-          '     COMMANDS: \n'
-          '         -gf: get temperature for next three days and hourly forecast\n'
-          '         -gw: get current weather\n'
-          '          -h: get help\n'
-          '     USE: \n'
-          '         python(3) [path to main.py] [city (if city name has spaces, please, make sure that name is in "''")] [command]')
+            print('Welcome to Weaterate!\n'
+                  '___HELP___\n'
+                  '     COMMANDS: \n'
+                  '         -gf: get temperature for next three days and hourly forecast\n'
+                  '         -gw: get current weather\n'
+                  '          -h: get help\n'
+                  '     USE: \n'
+                  '         python(3) [path to main.py] [city (if city name has spaces, please, make sure that name is in "''")] [command]')
         else:
             print('invalid choice: try -h for help')
